@@ -86,7 +86,7 @@ var translationInitiated = setInterval(function () {
                             $(this).text("ili");
                             break;
                         default:
-                        //Buy me a Lunch
+                        //Buy me a Lunch...
                     }
                 }
             }
