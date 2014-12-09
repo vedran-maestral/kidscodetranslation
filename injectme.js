@@ -1,10 +1,15 @@
+
+
+var notice = function() {
+    console.log("Mistral Technologies translation for Code.org is initiated. Version 1.0");
+};
+notice();
 var translationInitiated = setInterval(function () {
     $('*').each(function () {
         if ($(this).text()) {
             var tempElement = $(this).attr("class");
 
             if (tempElement === "blocklyText") {
-                console.log("Sve klase: " + $(this).text());
 
                 var tempVariable = $(this).text();
 
@@ -27,7 +32,7 @@ var translationInitiated = setInterval(function () {
                             $(this).text("Start");
                             break;
                         case "turn":
-                            $(this).text("okreni");
+                            $(this).text("okret");
                             break;
                         case "degrees":
                             $(this).text("stepeni");
@@ -55,6 +60,15 @@ var translationInitiated = setInterval(function () {
                             break;
                         case "right ↻ ▼":
                             $(this).text("desno ↻ ▼");
+                            break;
+                        case "repeat":
+                            $(this).text("ponovi");
+                            break;
+                        case "times":
+                            $(this).text("puta");
+                            break;
+                        case "do":
+                            $(this).text("radi");
                             break;
                         default:
                         //do nothing
