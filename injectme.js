@@ -85,9 +85,8 @@ var translationInitiated = setInterval(function () {
                         case "else":
                             $(this).text("ili");
                             break;
-
                         default:
-                        //do nothing
+                        //Buy me a Lunch
                     }
                 }
             }
