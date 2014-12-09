@@ -22,6 +22,9 @@ var translationInitiated = setInterval(function () {
                 if (tempVariable.indexOf("until") >= 0) {
                     tempVariable = "repeat_u"
                 }
+                if (tempVariable.indexOf("color") >= 0) {
+                    tempVariable = "set_c"
+                }
 
                 if (tempElement === "blocklyText") {
                     switch (tempVariable) {
@@ -29,10 +32,13 @@ var translationInitiated = setInterval(function () {
                             $(this).text("pokreni");
                             break;
                         case "move_f":
-                            $(this).text("kreni naprijed");
+                            $(this).text("naprijed");
                             break;
                         case "repeat_u":
                             $(this).text("ponavljaj do");
+                            break;
+                        case "set_c":
+                            $(this).text("Oboji u:");
                             break;
                         case "when_r":
                             $(this).text("Start");
@@ -50,22 +56,22 @@ var translationInitiated = setInterval(function () {
                             $(this).text("za");
                             break;
                         case "forward ▼":
-                            $(this).text("napred ▼");
+                            $(this).text("napred▼");
                             break;
                         case "backward ▼":
-                            $(this).text("nazad ▼");
+                            $(this).text("nazad▼");
                             break;
                         case "left ↺ ▼":
-                            $(this).text("lijevo ↺ ▼");
+                            $(this).text("lijevo↺▼");
                             break;
                         case "left ▼":
-                            $(this).text("lijevo ▼");
+                            $(this).text("lijevo▼");
                             break;
                         case "right ▼":
-                            $(this).text("desno ▼");
+                            $(this).text("desno▼");
                             break;
                         case "right ↻ ▼":
-                            $(this).text("desno ↻ ▼");
+                            $(this).text("desno↻▼");
                             break;
                         case "repeat":
                             $(this).text("ponovi");
