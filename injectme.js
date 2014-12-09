@@ -19,6 +19,9 @@ var translationInitiated = setInterval(function () {
                 if (tempVariable.indexOf("when") >= 0) {
                     tempVariable = "when_r"
                 }
+                if (tempVariable.indexOf("until") >= 0) {
+                    tempVariable = "repeat_u"
+                }
 
                 if (tempElement === "blocklyText") {
                     switch (tempVariable) {
@@ -27,6 +30,9 @@ var translationInitiated = setInterval(function () {
                             break;
                         case "move_f":
                             $(this).text("kreni naprijed");
+                            break;
+                        case "repeat_u":
+                            $(this).text("ponavljaj do");
                             break;
                         case "when_r":
                             $(this).text("Start");
@@ -70,6 +76,10 @@ var translationInitiated = setInterval(function () {
                         case "do":
                             $(this).text("radi");
                             break;
+                        case "else":
+                            $(this).text("ili");
+                            break;
+
                         default:
                         //do nothing
                     }
