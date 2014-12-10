@@ -26,13 +26,45 @@ var translationInitiated = setInterval(function () {
                     tempVariable = "set_c"
                 }
 
+                //Flap Game Specific
+                if (tempVariable.indexOf("circle") >= 0) {
+                    tempVariable = "create_c"
+                }
+                if (tempVariable.indexOf("scene") >= 0) {
+                    tempVariable = "set_scene"
+                }
+                if (tempVariable.indexOf("game") >= 0) {
+                    tempVariable = "end_game"
+                }
+                if (tempVariable.indexOf("speed") >= 0) {
+                    tempVariable = "set_speed"
+                }
+                if (tempVariable.indexOf("point") >= 0) {
+                    tempVariable = "score_point"
+                }
+
                 if (tempElement === "blocklyText") {
                     switch (tempVariable) {
+                        case "score_point":
+                            $(this).text("zaradi poen");
+                            break;
+                        case "set_speed":
+                            $(this).text("postavi brzinu");
+                            break;
+                        case "end_game":
+                            $(this).text("kraj igre");
+                            break;
+                        case "set_scene":
+                            $(this).text("postavi scenu");
+                            break;
                         case "move":
                             $(this).text("pokreni");
                             break;
                         case "move_f":
                             $(this).text("naprijed");
+                            break;
+                        case "create_c":
+                            $(this).text("napravi krug");
                             break;
                         case "repeat_u":
                             $(this).text("ponavljaj do");
@@ -82,8 +114,20 @@ var translationInitiated = setInterval(function () {
                         case "do":
                             $(this).text("radi");
                             break;
+                        case "jump":
+                            $(this).text("skoci");
+                            break;
                         case "else":
                             $(this).text("ili");
+                            break;
+                        case "flap":
+                            $(this).text("leti");
+                            break;
+                        case "play":
+                            $(this).text("pustaj");
+                            break;
+                        case "sound":
+                            $(this).text("zvuk");
                             break;
                         default:
                         //Buy me a Lunch...
